@@ -2,8 +2,11 @@ const express = require("express")
 const server = express()
 
 server.get("/", function(req, res){
-  res.send("<h1>Hello World</h1> <br/> <a href='/ayo'>Visit Ayo</a>")
-})
+  res.send ({
+    message:"Hello, welcome to first server world",
+  })
+  
+});
 
 server.get("/ayo", function(req, res){
   res.send("<h1>Hello Ayo</h1> <br/> <a href='/'>Go back home</a>")
